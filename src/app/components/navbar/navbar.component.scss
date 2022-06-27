@@ -1,0 +1,30 @@
+input {
+    border-color: var(--primary);
+}
+
+
+.logo {
+    width: 100%;
+    max-width: 300px;
+}
+
+.logAndSign {
+    font-size: 19px;
+
+    span:hover {
+        color: var(--secondary);
+    }
+
+    strong:hover {
+        color: var(--secondary);
+    }
+}
+
+.forgot:hover{
+ text-decoration: underline;
+ cursor: pointer;
+}
+
+input{
+    font-size: 14px;
+}

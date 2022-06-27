@@ -1,0 +1,27 @@
+<div class="swiper-container" (window:resize)="onResize($event)"> 
+  <h2  class="py-3 text-sec">Más Vendidos</h2>
+    <swiper 
+    [config]="config"
+    (swiper)="onSwiper($event)"
+    (slideChange)="onSlideChange()"
+    class="pb-5"
+  >
+    <ng-template  *ngFor="let v of vehicles" swiperSlide>
+        <div class="card click" style="width: 18rem;">
+            <img class="card-img-top" [src]="v.images[0]" alt="Card image cap">
+            <div class="card-body">
+              <h6 class="card-title">{{v.year}} {{v.brand}} {{v.model}} {{v.grade}}</h6>
+              <h5 *ngIf="!v.discount" class="card-text text-start">{{v.price | currency: 'USD'}}</h5>
+             
+              <h5 *ngIf="v.discount" class="card-text text-start">                
+                <span class="discount">{{ v.discount | currency: 'USD'}}</span>
+                 <span [ngClass]="v.discount ? 'text-pri ps-3': ''">{{v.price - v.discount | currency: 'USD'}}</span> 
+                </h5> 
+                <div *ngIf="v.discount" class="badge">Special Sale</div>    
+            </div>
+          </div>
+    </ng-template>
+    
+  </swiper>
+</div>
+

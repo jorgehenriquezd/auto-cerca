@@ -1,0 +1,10 @@
+<div class="swiper-container" (window:resize)="onResize($event)">
+    <h2 class="text-sec">Opciones de membresía</h2>
+    <h5 class="pb-4">Únase a nuestra membresía y disfrute de todos los privilegios en Autowini</h5>
+    <swiper [config]="config" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()" class="pb-5">
+        <ng-template *ngFor="let i of [1,2,3,4,5]" swiperSlide>
+            <img src="../../../../../assets/img/plan_{{i}}.png" alt="">
+        </ng-template>
+
+    </swiper>
+</div>

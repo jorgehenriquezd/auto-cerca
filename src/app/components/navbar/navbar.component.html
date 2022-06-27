@@ -1,0 +1,36 @@
+<div class="container pt-3">
+    <div class="row">
+        <div class="col-lg-3 col-md-12 col-sm-12 col-12 text-center">
+            <img class="logo" src="../../../assets/logo/logo/logo-08.png" alt="">
+        </div>
+        <div class="col-lg-5 col-md-12 col-sm-12 col-12 pt-3">
+            <div class="input-group mb-3">
+
+                <button class="btn btn-outline-secondary dropdown-toggle btn-pri text-sm" type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    {{searchType ? searchType : 'Todo'}}
+                </button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item click" (click)="getSearchType('')">Todo</li>
+                    <li *ngFor="let v of vehicleTypes" (click)="getSearchType(v.name)" class="dropdown-item click">{{v.name}}
+                    </li>
+                </ul>
+
+                <input type="text" class="form-control" placeholder="Más de 60,371 vehículos">
+                <button class="btn btn-outline-secondary btn-pri" type="button" id="button-addon1">Buscar</button>
+
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 col-sm-12 col-12 text-pri text-center pt-2">
+            <div class="click logAndSign">
+                <strong class="p-2">Ingresar</strong>
+                | <span class="p-2">Regístrate</span>
+            </div>  
+            <div class="text-sec text-sm">
+               <span class="forgot">¿Olvidó su usuario?</span>  ·                
+               <span class="forgot">¿Olvidó su contraseña?</span>            
+            </div>       
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.card{
+    height: 150px;
+}
+
+.btn{
+    border-radius: 100%;
+}
+
+img:hover{
+    position: relative;
+    right: 10px;
+    transform: translatex(-10px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+img{
+    transition: 0.5s;
+}

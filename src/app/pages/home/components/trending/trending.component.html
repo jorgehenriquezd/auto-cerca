@@ -1,0 +1,50 @@
+<div class="container py-4 text-sec">
+    <div class="row">
+        <div class="col-lg-8 col-md-12 col-sm-12 col-12">
+            <div class="row pb-3">
+                <div class="col-12">
+                    <h2>Trending Categories</h2>
+                </div>
+            </div>
+            <div class="row pb-2">
+                <div *ngFor="let c of categories" class="col-lg-4 col-md-6 col-sm-12 col-12 pb-2">
+                    <div class="card shadow-sm">
+                        <div class="row pt-3 px-2">
+                            <div class="col-9">
+                                <h5>{{c.name}}</h5>
+                            </div>
+                            <div class="col-3 text-end">
+                                <button class="btn btn-pri">></button>
+                            </div>
+                        </div>
+                        <div class="row text-sec pt-2">
+                            <div class="col-7">
+                                <div class="p-2">{{c.stock}} a la venta</div>
+                            </div>
+                            <div class="col-5 text-end">
+                                <img width="95%" [src]="c.img" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 col-12">
+            <h2>Best Seller</h2>
+            <div style="line-height: 8px;">For last 30 days</div>
+            <ul class="list-group-flush pt-3">
+                <li *ngFor="let c of categories; index as i" class="list-group-item">
+                    <div class="row">
+                        <div class="col-2">{{i+1}}</div>
+                        <div class="col-3"> <img width="80%" [src]="c.img" alt=""></div>
+                        <div class="col-7">
+                           <strong>{{c.name}}</strong> 
+                         <div class="text-sm">FOB {{1500 | currency:'USD'}}</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

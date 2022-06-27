@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+@import 'swiper/css/bundle';
+
+:root{
+    --primary: #be2026;
+    --secondary: #4d4d4d;
+    --tertiary: #070848;
+    --alter: #ffbc00;
+    --alter2: #f97120;
+}
+
+.text-sm{
+    font-size: 14px;
+}
+
+.text-pri{
+    color: var(--primary);
+}
+
+.text-sec{
+    color: var(--secondary);
+}
+
+.text-ter{
+    color: var(--tertiary);
+}
+
+.text-alt{
+    color: var(--alter);
+}
+
+.text-alt2{
+    color: var(--alter2);
+}
+
+.btn-pri{
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.btn-pri:hover{
+    background: var(--secondary);
+    color: white;
+}
+
+.click{
+    cursor: pointer;
+}
+
+.badge{
+    min-width: 80px;
+    min-height: 23px;
+    background-color: var(--tertiary);
+    color: white;
+}
+

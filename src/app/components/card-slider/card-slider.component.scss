@@ -1,0 +1,21 @@
+.swiper-container{
+    padding-top: 40px;
+    padding-left: 70px;
+}
+
+.discount{
+    text-decoration: line-through;
+    color: rgb(170, 170, 170);
+    font-weight: 400;
+}
+
+.card{
+    height: 360px;
+}
+
+@media screen and (max-width:992px) {
+
+    .swiper-container{       
+        padding-left: 20px;
+    }
+}

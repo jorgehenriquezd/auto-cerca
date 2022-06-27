@@ -1,0 +1,27 @@
+<div class="container-testimonial">
+<div class="text-end text-light p-4 click">Ver más ></div>
+    <h2 class="text-center text-alt">114,584 vechicles shipped</h2>
+    <h3 class="text-center text-light">A través de los servicios Autowini</h3>
+
+    <div class="swiper-container" (window:resize)="onResize($event)">   
+          <swiper 
+          [config]="config"
+          (swiper)="onSwiper($event)"
+          (slideChange)="onSlideChange()"
+          class="pb-5"
+        >
+          <ng-template  *ngFor="let i of [1,1,1,1,1]" swiperSlide>
+              <div class="card click" style="width: 18rem;">
+                  <img class="card-img-top" src="https://www.superiorhonda.net/blogs/2373/wp-content/uploads/2019/08/What-Paperwork-Do-I-Need-to-Trade-in-my-Car.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <h6 class="card-title">Excelente servicio, me encanta mi nuevo vehículo</h6>                   
+                    <img width="20px" src="../../../../../assets/img/ibique-flag.png" alt="">
+                        <span class="ps-2">Ibique</span>                      
+                  </div>
+                </div>
+          </ng-template>
+          
+        </swiper>
+      </div> 
+    
+</div>

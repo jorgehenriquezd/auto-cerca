@@ -1,0 +1,13 @@
+
+<swiper 
+[config]="config"
+(swiper)="onSwiper($event)"
+(slideChange)="onSlideChange()"
+>
+<ng-template  *ngFor="let a of ads" swiperSlide>
+    <div [style.background]="a.color" class="text-center square">
+         <img [src]="a.url">
+    </div>  
+</ng-template>
+
+</swiper>
